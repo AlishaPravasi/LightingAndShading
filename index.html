@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Lab 5</title>
+    <link rel="icon" type="image/png" href="COMP3801_RGB_cube.png" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="Common/webgl-utils-2.js" type="text/javascript"></script>
+    <script src="Common/initShaders2.js" type="text/javascript"></script>
+    <script src="Common/MV.js" type="text/javascript"></script>
+    <script src="Cylinder.js" type="text/javascript"></script>
+    <script src="Lighting.js" type="text/javascript"></script>
+  </head>
+  <body onload="new Lighting('gl-canvas')">
+    <div align="center">
+      <canvas id="gl-canvas" width="512" height="320">
+        This browser doesn't support the HTML5 canvas element
+      </canvas>
+      <table border=1>
+        <tr style="background-color: lightgray; color: black">
+          <td><input id="gl-canvas-long-slider" type="range" min="-180" max="180" value="0"  step="1" style="width:200px" /></td>
+          <td>Camera Longitude</td>
+          <td id="gl-canvas-long-value" style="width: 60px; text-align: right">0.00</td>
+        </tr>
+        <tr style="background-color: lightgray; color: black">
+          <td><input id="gl-canvas-lat-slider" type="range" min="-90" max="90" value="0"  step="1" style="width:200px" /></td>
+          <td>Camera Latitude</td>
+          <td id="gl-canvas-lat-value" style="width: 60px; text-align: right">0.00</td>
+        </tr>
+        <tr style="background-color: lightgray; color: black">
+          <td><input id="gl-canvas-rad-slider" type="range" min="0" max="5" value="2.5"  step="0.01" style="width:200px" /></td>
+          <td>Camera Radius</td>
+          <td id="gl-canvas-rad-value" style="width: 60px; text-align: right">2.50</td>
+        </tr>
+         <tr style="background-color: lightyellow; color: black">
+          <td><input id="gl-canvas-lx-slider" type="range" min="0.0" max="10.0" value="5.0"  step="0.1" style="width:200px"/></td>
+          <td>Light X</td>
+          <td id="gl-canvas-lx-value" style="width: 60px; text-align: right">5.0</td>
+        </tr>
+        <tr style="background-color: lightyellow; color: black">
+          <td><input id="gl-canvas-ly-slider" type="range" min="-5.0" max="5.0" value="0.0"  step="0.1" style="width:200px" /></td>
+          <td>Light Y</td>
+          <td id="gl-canvas-ly-value" style="width: 60px; text-align: right">0.0</td>
+        </tr>
+        <tr style="background-color: lightyellow; color: black">
+          <td><input id="gl-canvas-lz-slider" type="range" min="-5.0" max="5.0" value="0.0"  step="0.1" style="width:200px" /></td>
+          <td>Light Z</td>
+          <td id="gl-canvas-lz-value" style="width: 60px; text-align: right">0.0</td>
+        </tr>
+      </table>
+      <div style="font-family: sans-serif">
+        Show edges<input type="checkbox" id="gl-canvas-show-edges" /><br />
+      </div>
+        <div style="font-family: sans-serif">
+        Ambient<input type="checkbox" id="gl-canvas-ambient" />
+        Diffuse<input type="checkbox" id="gl-canvas-diffuse" />
+        Specular<input type="checkbox" id="gl-canvas-specular" />
+      </div>
+      
+    </div>
+  </body>
+</html>
